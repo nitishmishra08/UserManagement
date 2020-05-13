@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container">
+    <hr>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search user by Name" [(ngModel)]="searchTerm" />
+    </div>
+    <div class="row">
+
+        <div class="col-md-6 wrapper-design" *ngFor="let data of filteredUser">
+            <a [routerLink]="['/user',data.id]">
+                <h4 class="align-center">ID:{{data.id}}</h4>
+                <h6><strong>Name:</strong>{{data.name}}</h6>
+                <h6><strong>UserID:</strong>{{data.userId}}</h6>
+                <h6><strong>Username:</strong>{{data.username}}</h6>
+                <h6><strong>Email:</strong>{{data.email}}</h6>
+                <h6><strong>Title:</strong>{{data.title}}</h6>
+                <h6><strong>Phone:</strong>{{data.phone}}</h6>
+                <h6><strong>Website:</strong>{{data.website}}</h6>
+                <h6><strong>Company Name:</strong>{{data.company.name}}</h6>
+                <div>
+                    <strong>Address:</strong>
+                    <ul>
+                        <li>
+                            <h6><strong>Street:</strong>{{data.address.street}}</h6>
+                        </li>
+                        <li>
+                            <h6><strong>Suite:</strong>{{data.address.suite}}</h6>
+                        </li>
+                        <li>
+                            <h6><strong>City:</strong>{{data.address.city}}</h6>
+                        </li>
+                        <li>
+                            <h6><strong>Zipcode:</strong>{{data.address.zipcode}}</h6>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+            </a>
+        </div>
+
+
+    </div>
+
+</div>
+<app-footer></app-footer>

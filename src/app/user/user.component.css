@@ -1,0 +1,16 @@
+.wrapper-design{
+    background-color:aliceblue;
+    border: 2px solid brown;
+    border-radius: 20px;
+}
+.align-center{
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 10px;
+    background: darkgrey;
+}
+input{
+    width: 20%;
+}
+    

@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "/home/niraj/Angular/DecisionPointUi/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },

@@ -1,0 +1,35 @@
+.header{
+    width:100%;
+    height:60px;
+    background-color: #292c2f;
+}
+body{
+    margin:0px;
+    padding:0px;
+}
+.logo{
+    color:#663399;
+    
+font-family:verdana;
+    text-align:left;
+    margin-top:0px;
+    float:left;
+    margin:0px;
+    line-height:50px;
+    padding-left:9px;
+}
+
+.wrapper{
+    
+    display:inline-block;
+    line-height:52px;
+    padding-right:14px;
+}
+h3{
+    color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+span{
+    color: #5383d3;
+}

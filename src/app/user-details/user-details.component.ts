@@ -1,0 +1,43 @@
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { postDataCaptureService } from '../post-dataCapture.service';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+
+@Component({
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrls: ['./user-details.component.css']
+})
+export class UserDetailsComponent implements OnInit,OnDestroy {
+
+  loadingIndicator:boolean= false;
+  user=[];
+  susbscription:Subscription;
+  
+  constructor(
+    private userService: postDataCaptureService,
+    private route: ActivatedRoute
+  ){}
+
+    ngOnInit(){
+      
+    this.susbscription= this.route.params.subscribe(param => {
+        console.log(param)
+        if(param){
+           this.userService.getUserOnSelect(param.id).subscribe(val =>{
+             if(val){
+             this.user=val[0];
+             this.loadingIndicator= true;
+             console.log(this.user);
+             }
+           });
+          
+          
+        }
+      })
+
+}
+ngOnDestroy(){
+  this.susbscription.unsubscribe();
+}
+}
