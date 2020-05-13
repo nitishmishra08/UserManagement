@@ -14,7 +14,11 @@ export class UserDetailsComponent implements OnInit,OnDestroy {
 
   loadingIndicator:boolean= false;
   //user: UserPost;
-  private user=[];
+   user=[{
+     body:'',
+     id:'',
+     title:''
+   }];
   susbscription:Subscription;
   
   constructor(
